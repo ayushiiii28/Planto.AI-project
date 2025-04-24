@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Smooth font rendering for code */
+body {
+  @apply antialiased bg-white text-gray-800 dark:bg-zinc-900 dark:text-zinc-100;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Ensure full height layouts */
+html,
+body,
+:root {
+  height: 100%;
+}
+
+/* CodeMirror base styling override */
+.cm-editor {
+  height: 100%;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.95rem;
+}
+
+/* Optional: clean scrollbar for code editor */
+.cm-scroller::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.cm-scroller::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 6px;
+}
+
+/* Smooth transitions for theme switch */
+* {
+  transition: background-color 0.2s, color 0.2s;
+}
